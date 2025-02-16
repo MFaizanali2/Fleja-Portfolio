@@ -1,0 +1,52 @@
+.award-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: auto;
+    padding: 20px;
+    background: #38d16a;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.award-content {
+    max-width: 1200px;
+    width: 100%;
+    color: #fff;
+    padding: 30px 40px;
+    /* text-align: center; */
+}
+
+.award-content h1{
+    font-size: 45px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.award-content h6{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .award-content {
+        padding: 20px;
+    }
+
+    .award-content h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .award-content {
+        padding: 15px;
+    }
+
+    .award-content h1 {
+        font-size: 20px;
+    }
+}

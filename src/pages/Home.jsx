@@ -4,6 +4,9 @@ import Branding from "../components/Branding/Branding"
 import About from "../components/About/About"
 import Services from "../components/Services/Services"
 import Contact from "../components/Contact/Contact"
+import Skills from "../components/Skills/Skills"
+import Award from "../components/Award/Award"
+import Some from "../components/Some/Some"
 
 
 import { BannerText1 } from "../utils/constant/Banner"
@@ -11,6 +14,8 @@ import { BrandingData } from "../utils/constant/Branding"
 import { AboutData } from "../utils/constant/About"
 import { ServicesData } from "../utils/constant/Services"
 import { ContactData } from "../utils/constant/Contact"
+import { AwardData } from "../utils/constant/Award"
+import { SomeData } from "../utils/constant/Some"
 
 const Home = () => {
   return (
@@ -38,7 +43,17 @@ const Home = () => {
       </div>
 
       <Contact data={ContactData}/>
+      <Skills />
 
+      <div className="award-box">
+        {AwardData.map((item , index)=>{
+          return(
+            <Award key={index} data={item}/>
+          )
+        })}
+      </div>
+
+      <Some data={SomeData}/>
     </div>
   )
 }
