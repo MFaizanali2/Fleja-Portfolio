@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingBag, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +30,12 @@ const Header = () => {
         ☰
       </button>
       <ul className={isOpen ? "nav-links open" : "nav-links"}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/services">Services</NavLink></li>
+        <li><NavLink to="/skills">Skills</NavLink></li>
+        <li><NavLink to="/work">Work</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
         <div className="nav-btn">
           <FontAwesomeIcon icon={faSearch} className="icon" />
           <FontAwesomeIcon icon={faShoppingBag} className="icon" />

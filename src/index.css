@@ -5,6 +5,11 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .branding-box{
     display: flex;
     align-items: center;
